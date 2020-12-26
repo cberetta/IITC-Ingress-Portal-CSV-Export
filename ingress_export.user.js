@@ -3,9 +3,9 @@
 // @name IITC Plugin: Ingress Portal CSV Export
 // @category Information
 // @version 0.0.5
-// @namespace http://github.com/Zetaphor/IITC-Ingress-Portal-CSV-Export
-// @updateURL https://raw.githubusercontent.com/Zetaphor/IITC-Ingress-Portal-CSV-Export/master/ingress_export.js
-// @downloadURL https://raw.githubusercontent.com/Zetaphor/IITC-Ingress-Portal-CSV-Export/master/ingress_export.js
+// @namespace http://github.com/cberetta/IITC-Ingress-Portal-CSV-Export
+// @updateURL https://raw.githubusercontent.com/cberetta/IITC-Ingress-Portal-CSV-Export/master/ingress_export.js
+// @downloadURL https://raw.githubusercontent.com/cberetta/IITC-Ingress-Portal-CSV-Export/master/ingress_export.js
 // @description Exports portals to a CSV list
 // @include https://*ingress.com/intel*
 // @include http://*ingress.com/intel*
