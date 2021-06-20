@@ -2,7 +2,7 @@
 // @id iitc-plugin-ingressportalcsvexport@zetaphor
 // @name IITC Plugin: Ingress Portal CSV Export
 // @category Information
-// @version 0.0.7
+// @version 0.0.8
 // @namespace http://github.com/cberetta/IITC-Ingress-Portal-CSV-Export
 // @updateURL https://raw.githubusercontent.com/cberetta/IITC-Ingress-Portal-CSV-Export/master/ingress_export.js
 // @downloadURL https://raw.githubusercontent.com/cberetta/IITC-Ingress-Portal-CSV-Export/master/ingress_export.js
@@ -104,7 +104,7 @@ function wrapper() {
         //str = str.replace(/\"/g, "\\\"");
         //str = str.replace(";", "_");
         str = str.replace(/\"/g, "\"\"");
-        str = '"'+str+'"' + "," + href + "," + '"'+image+'"';
+        str = portalGuid+',"'+str+'"' + "," + href + "," + '"'+image+'"';
         if (window.plugin.keys && (typeof window.portals[portalGuid] !== "undefined")) {
             var keyCount =window.plugin.keys.keys[portalGuid] || 0;
             str = str + "," + keyCount;
@@ -117,6 +117,7 @@ function wrapper() {
             lng = portal._latlng.lng,
             title = portal.options.data.title || "untitled portal";
             image = portal.options.data.image || ""
+            //console.log(portal)
 
         return self.genStr(title, image, lat, lng, portalGuid);
     };
@@ -190,7 +191,7 @@ function wrapper() {
                         name='portal_list_area'
                         rows='30'
                         placeholder='Zoom level must be 15 or higher for portal data to load'
-                        style="width: 100%; white-space: nowrap;">${csvData}</textarea>
+                        style="width: 100%; white-space: pre;">${csvData}</textarea>
                 </div>
             </div>
         </form>
