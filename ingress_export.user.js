@@ -164,7 +164,7 @@ function wrapper() {
     };
 
     self.generateCsvData = function() {
-        var csvData = 'Name, Latitude, Longitude, Image' + "\n";
+        var csvData = 'Portal Guid, Name, Latitude, Longitude, Image' + "\n";
         $.each(window.master_portal_list, function(key, value) {
             csvData += (value + "\n");
         });
